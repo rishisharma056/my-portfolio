@@ -58,3 +58,13 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  .cosmic-button {
+    @apply inline-block px-8 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-semibold transition-all duration-300 hover:shadow-[0_0_40px_hsl(263_70%_60%/0.4)] hover:scale-105;
+  }
+}

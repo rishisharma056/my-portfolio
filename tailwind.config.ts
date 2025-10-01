@@ -80,6 +80,22 @@ export default {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
+        "fade-in-delay-1": {
+          "0%, 20%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        "fade-in-delay-2": {
+          "0%, 40%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        "fade-in-delay-3": {
+          "0%, 60%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        "fade-in-delay-4": {
+          "0%, 80%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
         "scale-in": {
           "0%": { transform: "scale(0.9)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" }
@@ -92,8 +108,12 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.5s ease-out",
+        "fade-in": "fade-in 0.8s ease-out forwards",
         "fade-in-up": "fade-in-up 0.6s ease-out",
+        "fade-in-delay-1": "fade-in-delay-1 1.2s ease-out forwards",
+        "fade-in-delay-2": "fade-in-delay-2 1.4s ease-out forwards",
+        "fade-in-delay-3": "fade-in-delay-3 1.6s ease-out forwards",
+        "fade-in-delay-4": "fade-in-delay-4 1.8s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out",
         "gradient-shift": "gradient-shift 3s ease infinite",
       },

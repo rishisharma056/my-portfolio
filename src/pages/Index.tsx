@@ -6,10 +6,12 @@ import Projects from "@/components/Projects";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ThemeToggle />
       <Header />
       <main>
         <Hero />
