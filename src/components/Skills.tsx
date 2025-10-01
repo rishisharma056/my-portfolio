@@ -36,7 +36,7 @@ const Skills = () => {
               <h3 className="text-2xl font-semibold mb-6 text-primary">
                 {category.category}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center">
                 {category.skills.map((skill, index) => (
                   <Badge
                     key={index}
