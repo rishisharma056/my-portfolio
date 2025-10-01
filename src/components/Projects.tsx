@@ -5,11 +5,11 @@ import { Button } from "./ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      title: "Intership Allocation System",
+      description: "AI-Based Smart Allocation Engine for Internships.This project builds an AI/ML-powered smart allocation engine to match students with internship opportunities.",
+      tags: ["React", "Node.js", "PostgreSQL", "Python", "FastAPI"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example",
+      githubUrl: "https://github.com/rishisharma056/Internship-Allocation",
     },
     {
       title: "Task Management App",
@@ -35,7 +35,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-secondary/30">
+    <section id="projects" className="py-24">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 animate-fade-in">
           Featured Projects

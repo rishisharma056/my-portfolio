@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,8 +18,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            Portfolio
+          <a 
+            className="text-xl font-bold text-primary flex items-center"
+            href="#hero"
+          >
+            <span className="relative z-10">
+              <span className="text-glow text-foreground">Rishi Sharma</span> Porfolio
+            </span>
           </a>
 
           {/* Desktop Navigation */}

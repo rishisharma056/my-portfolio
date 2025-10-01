@@ -6,8 +6,8 @@ import Projects from "@/components/Projects";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { StarBackground } from "@/components/StarBackground";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   return (

@@ -16,14 +16,14 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
+    { icon: Mail, label: "Email", href: "rs9490268@gmail.com" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Github, label: "GitHub", href: "https://github.com" },
+    { icon: Github, label: "GitHub", href: "https://github.com/rishisharma056" },
     { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
   ];
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30">
+    <section id="contact" className="py-24">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 animate-fade-in">
           Get In Touch
