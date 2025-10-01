@@ -1,70 +1,128 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
-@layer base {
-  :root {
-    --background: 220 25% 6%;
-    --foreground: 210 40% 98%;
-
-    --card: 220 20% 10%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 220 20% 10%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 263 70% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 220 15% 15%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 263 70% 60%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 263 70% 60%;
-
-    --radius: 0.75rem;
-
-    --gradient-primary: linear-gradient(135deg, hsl(263, 70%, 60%), hsl(220, 90%, 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(263, 70%, 60%) 0%, hsl(220, 90%, 60%) 100%);
-    --shadow-glow: 0 0 40px hsl(263 70% 60% / 0.3);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+/* ---------------------- */
+/* Root Variables / Colors */
+:root {
+  --border: 214 32% 91%;
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --primary: 250 47% 60%;
+  --primary-foreground: 210 40% 98%;
+  --muted-foreground: 215 20% 65%;
 }
 
+/* Dark Mode */
+.dark {
+  --border: 217 33% 20%;
+  --background: 222 47% 4%;
+  --foreground: 213 31% 91%;
+  --card: 222 47% 8%;
+  --primary: 250 65% 65%;
+  --primary-foreground: 213 31% 91%;
+}
+
+/* ---------------------- */
+/* Base Styles */
 html {
-  scroll-behavior: smooth;
+  @apply scroll-smooth;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
+body {
+  @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] transition-colors duration-300;
+  font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-@layer components {
-  .text-gradient {
-    @apply bg-gradient-primary bg-clip-text text-transparent;
-  }
-
-  .cosmic-button {
-    @apply inline-block px-8 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-semibold transition-all duration-300 hover:shadow-[0_0_40px_hsl(263_70%_60%/0.4)] hover:scale-105;
-  }
+/* ---------------------- */
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+@keyframes scale-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease-out forwards;
+}
+.animate-fade-in-up {
+  animation: fade-in 0.7s ease-out forwards;
+}
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out forwards;
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ---------------------- */
+/* Utility Classes */
+.bg-card {
+  background-color: hsl(var(--card));
+}
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+.border-border {
+  border-color: hsl(var(--border));
+}
+.text-primary {
+  color: hsl(var(--primary));
+}
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+.border-primary {
+  border-color: hsl(var(--primary));
+}
+
+/* Buttons */
+.cosmic-button {
+  @apply px-6 py-2 rounded-full font-medium transition-all duration-300;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+.cosmic-button:hover {
+  @apply scale-105;
+  box-shadow: 0 0 10px rgba(139,92,246,0.5);
+}
+.cosmic-button:active {
+  @apply scale-95;
+}
+
+/* Card Hover */
+.card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+/* Gradient border */
+.gradient-border {
+  @apply relative rounded-md border border-transparent;
+  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+}
+
+/* ---------------------- */
+/* Misc */
+.container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) { .container { max-width: 640px; } }
+@media (min-width: 768px) { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+@media (min-width: 1400px) { .container { max-width: 1400px; } }
