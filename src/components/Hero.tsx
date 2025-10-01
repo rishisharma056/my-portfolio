@@ -1,20 +1,11 @@
 import { ArrowDown } from "lucide-react";
-import spaceBg from "@/assets/space-bg.jpg";
 
 const Hero = () => {
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
-      style={{
-        backgroundImage: `url(${spaceBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
     >
-      <div className="absolute inset-0 bg-background/30"></div>
-      
       <div className="container max-w-4xl mx-auto text-center z-10 relative">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
