@@ -30,7 +30,7 @@ Welcome to my personal portfolio! This website showcases my skills, projects, an
 
 1. **Clone the repository**  
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/rishisharma056/my-portfolio.git
 ```
 2. Install Dependencies
 ```bash
