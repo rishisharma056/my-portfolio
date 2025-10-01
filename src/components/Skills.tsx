@@ -33,7 +33,7 @@ const Skills = () => {
               className="animate-fade-in-up"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
-              <h3 className="text-2xl font-semibold mb-6 text-primary">
+              <h3 className="text-2xl font-semibold mb-6 text-primary text-center">
                 {category.category}
               </h3>
               <div className="flex flex-wrap gap-3 justify-center">
