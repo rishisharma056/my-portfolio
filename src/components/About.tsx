@@ -28,7 +28,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12 animate-fade-in">
-            Passionate developer with expertise in building modern web applications
+            High-Difficulty Problem Solving & Iterative Mastery
           </p>
 
           <div className="bg-card rounded-2xl p-8 mb-12 border border-border animate-scale-in">
