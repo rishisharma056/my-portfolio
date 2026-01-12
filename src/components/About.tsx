@@ -33,12 +33,14 @@ const About = () => {
 
           <div className="bg-card rounded-2xl p-8 mb-12 border border-border animate-scale-in">
             <p className="text-lg leading-relaxed mb-6">
-              Hi! I'm a full-stack developer with a passion for creating beautiful, functional, and user-friendly applications. 
-              With several years of experience in web development, I specialize in React, TypeScript, and modern backend technologies.
+              Demonstrated extensive experience in high-difficulty problem solving environments where sustained persistence and structured learning drive mastery. 
+              Specialized in iterative learning through systematic failure analysis, treating each setback as actionable data to refine strategy and execution. 
+              Proven ability to recognize patterns through repeated exposure, optimize approaches based on historical outcomes, and progress through challenges requiring 
+              numerous failed attempts before success. Employ a research-driven mindset, emphasizing advance preparation, contingency planning for known failure points, 
+              and efficient resource allocation to achieve complex objectives.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends. 
-              When I'm not coding, you'll find me contributing to open-source projects or writing technical articles.
+              Strong belief that failure is diagnostic, not defeat, and that disciplined repetition and preparation differentiate mastery from attrition.
             </p>
           </div>
 
